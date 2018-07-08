@@ -1,2 +1,5 @@
 # IDE Files
 .idea
+
+# Exemple Files
+*.txt
