@@ -1,5 +1,10 @@
 # IDE Files
 .idea
 
-# Exemple Files
-*.txt
+# Example Files
+hello.txt
+hello2.txt
+
+# Node Files
+node_modules/*
+package-lock.json

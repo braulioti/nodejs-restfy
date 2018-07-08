@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-restfy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braulioti/nodejs-restfy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braulioti/nodejs-restfy/issues"
+  },
+  "homepage": "https://github.com/braulioti/nodejs-restfy#readme",
+  "dependencies": {
+    "yargs": "^12.0.1"
+  }
+}
