@@ -4,7 +4,9 @@
 # Example Files
 hello.txt
 hello2.txt
+hello3.txt
 
 # Node Files
 node_modules/*
+dist/*
 package-lock.json
