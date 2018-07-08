@@ -1,3 +1,5 @@
+const fatorial = require('./fatorial');
+
 console.log('n-fatorial');
 
 /*
@@ -8,13 +10,7 @@ process.on('exit', () => {
 })
 */
 
-const fatorial = (num) => {
-    if (num === 0) {
-        return 1;
-    }
 
-    return num * fatorial (num - 1);
-}
 
 const num = parseInt(process.argv[2]);
 
