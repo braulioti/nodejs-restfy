@@ -2,11 +2,17 @@
 .idea
 
 # Example Files
-hello.txt
-hello2.txt
-hello3.txt
 
-# Node Files
+# Fatorial
+fatorial/hello.txt
+fatorial/hello2.txt
+fatorial/hello3.txt
 fatorial/node_modules/*
 fatorial/dist/*
 fatorial/package-lock.json
+
+# Meat API
+meat-api/package-lock.json
+meat-api/node_modules/*
+meat-api/dist/*
+
