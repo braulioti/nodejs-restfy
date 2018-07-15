@@ -7,6 +7,6 @@ hello2.txt
 hello3.txt
 
 # Node Files
-node_modules/*
-dist/*
-package-lock.json
+fatorial/node_modules/*
+fatorial/dist/*
+fatorial/package-lock.json

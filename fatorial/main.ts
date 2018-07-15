@@ -1,8 +1,8 @@
-import {fatorial} from "./fatorial";
+import {fatorial} from "./";
 
 console.log('=== n-fatorial ===');
 
-const argv = require('yargs').demandOption('num').argv
+const argv = require('yargs').demandOption('num').argv;
 
 /*
 console.log(`Executando o script a partir de ${process.cwd()}`);
