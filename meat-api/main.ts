@@ -14,7 +14,7 @@ server.get('/info', [
             // resp.json({ message: 'Please, update your browser' });
             let error: any = new Error();
             error.statusCode = 400;
-            error.message = 'Please, update your browser';
+            error.message = 'Please, update your browser ';
             return next(error);
         }
         return next();
