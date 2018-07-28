@@ -2,8 +2,10 @@ import * as restify from 'restify';
 import * as mongoose from 'mongoose';
 import {environment} from '../common/environments';
 import {Router} from '../common/router';
+import {indexRouter} from '../index/index.router';
 import {mergePatchBodyParser} from './merge-patch.parser';
 import {handleError} from './error.handle';
+import {ModelRouter} from '../common/model-router';
 
 export class Server {
     application: restify.Server;
@@ -31,7 +33,9 @@ export class Server {
 
                 for (let router of routers) {
                     router.applyRoutes(this.application);
+                    indexRouter.addRouter(router as ModelRouter<any>);
                 }
+                indexRouter.applyRoutes(this.application);
 
                 this.application.listen(environment.server.port, () => {
                     resolve(this.application);

@@ -2,6 +2,7 @@ import {Server} from './server/server';
 import {usersRouter} from './users/users.router';
 import {restaurantsRouter} from './restaurants/restaurants.router';
 import {reviewsRouter} from './reviews/reviews.router';
+import {indexRouter} from './index/index.router';
 
 const server = new Server();
 
