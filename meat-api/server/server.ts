@@ -6,6 +6,7 @@ import {indexRouter} from '../index/index.router';
 import {mergePatchBodyParser} from './merge-patch.parser';
 import {handleError} from './error.handler';
 import {ModelRouter} from '../common/model-router';
+import {tokenParser} from '../seurity/token.parser';
 
 export class Server {
     application: restify.Server;
@@ -28,6 +29,7 @@ export class Server {
                 this.application.use(restify.plugins.queryParser());
                 this.application.use(restify.plugins.bodyParser());
                 this.application.use(mergePatchBodyParser);
+                this.application.use(tokenParser);
 
                 // routes
 
