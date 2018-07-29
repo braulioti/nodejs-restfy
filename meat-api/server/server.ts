@@ -4,7 +4,7 @@ import {environment} from '../common/environments';
 import {Router} from '../common/router';
 import {indexRouter} from '../index/index.router';
 import {mergePatchBodyParser} from './merge-patch.parser';
-import {handleError} from './error.handle';
+import {handleError} from './error.handler';
 import {ModelRouter} from '../common/model-router';
 
 export class Server {
