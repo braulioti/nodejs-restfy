@@ -2,7 +2,7 @@ import * as restify from 'restify';
 import {ModelRouter} from '../common/model-router';
 import {Restaurant} from './restaurants.model';
 import {NotFoundError} from 'restify-errors';
-import {authorize} from '../seurity/authz.handler';
+import {authorize} from '../security/authz.handler';
 
 class RestaurantsRouter extends ModelRouter<Restaurant> {
 

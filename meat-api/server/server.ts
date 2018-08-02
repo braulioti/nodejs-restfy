@@ -6,7 +6,8 @@ import {indexRouter} from '../index/index.router';
 import {mergePatchBodyParser} from './merge-patch.parser';
 import {handleError} from './error.handler';
 import {ModelRouter} from '../common/model-router';
-import {tokenParser} from '../seurity/token.parser';
+import {tokenParser} from '../security/token.parser';
+import * as fs from 'fs';
 
 export class Server {
     application: restify.Server;
@@ -23,7 +24,9 @@ export class Server {
             try {
                 this.application = restify.createServer({
                     name: 'meat-api',
-                    version: '1.0.0'
+                    version: '1.0.0',
+                    certificate: fs.readFileSync('./security/keys/cert.pem'),
+                    key: fs.readFileSync('./security/keys/key.pem')
                 });
 
                 this.application.use(restify.plugins.queryParser());

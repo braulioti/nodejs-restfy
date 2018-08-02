@@ -1,8 +1,8 @@
 import * as restify from 'restify';
 import {User} from './users.model';
 import {ModelRouter} from '../common/model-router';
-import {authenticate} from '../seurity/auth.handler';
-import {authorize} from '../seurity/authz.handler';
+import {authenticate} from '../security/auth.handler';
+import {authorize} from '../security/authz.handler';
 
 class UsersRouter extends ModelRouter<User> {
 
