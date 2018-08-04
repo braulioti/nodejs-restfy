@@ -22,12 +22,18 @@ export class Server {
     initRoutes(routers: Router[]): Promise<any> {
         return new Promise((resolve, reject) => {
             try {
-                this.application = restify.createServer({
+                const options: restify.ServerOptions = {
                     name: 'meat-api',
                     version: '1.0.0',
-                    certificate: fs.readFileSync('./security/keys/cert.pem'),
-                    key: fs.readFileSync('./security/keys/key.pem')
-                });
+
+                };
+
+                if (environment.security.enableHTTPS) {
+                    options.certificate = fs.readFileSync(environment.security.certificate);
+                    options.key = fs.readFileSync(environment.security.key);
+                }
+
+                this.application = restify.createServer(options);
 
                 this.application.use(restify.plugins.queryParser());
                 this.application.use(restify.plugins.bodyParser());
@@ -35,7 +41,6 @@ export class Server {
                 this.application.use(tokenParser);
 
                 // routes
-
                 for (let router of routers) {
                     router.applyRoutes(this.application);
                     indexRouter.addRouter(router as ModelRouter<any>);
